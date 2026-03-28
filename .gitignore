@@ -1,0 +1,7 @@
+output/*
+dist/*
+claude/*
+.venv/*
+__pycache__/
+build/
+data_look.ipynb
