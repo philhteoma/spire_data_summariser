@@ -193,7 +193,7 @@ def process_run_history(history_path, cards_json_path, status_callback=None):
 
     # Load card data
     status("Loading card data...")
-    with open(cards_json_path, "r") as file:
+    with open(cards_json_path, "r", encoding="utf-8") as file:
         card_data = json.loads(file.read())
 
     card_dict = {"CARD." + c["id"]: c for c in card_data}
