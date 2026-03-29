@@ -12,7 +12,7 @@ from src.resource_path import get_resource_path
 
 def get_default_data_dir():
     if platform.system() == "Windows":
-        appdata = Path.home() / "AppData" / "LocalLow" / "MegaCrit" / "SlayTheSpire2"
+        appdata = Path.home() / "AppData" / "Roaming" / "SlayTheSpire2"
         if appdata.exists():
             return str(appdata)
     else:
@@ -47,7 +47,7 @@ class App(ctk.CTk):
         row += 1
 
         # Steam ID
-        ctk.CTkLabel(self, text="Steam ID:").grid(
+        ctk.CTkLabel(self, text="Steam ID (Optional):").grid(
             row=row, column=0, columnspan=3, sticky="w", padx=12, pady=(12, 2))
         row += 1
 
